@@ -2,12 +2,12 @@
 title: "Evaluating the Accuracy of Emergency Department Triage Nurses in Predicting Patient Admissions: retrospective, large-sample evidence from a community ED"
 collection: publications
 category: manuscripts
-permalink: /publication/2025-05-NursePrediction
+permalink: /publication/2025-05-07-NursePrediction
 excerpt: |
     - Study evaluating how accurately ED triage nurses can predict patient hospital admissions, using data from 134,891 visits over five years.
     - Found 85.8% overall accuracy, with nurses better at identifying patients who don't need admission (93.7% specificity) than identifying those who do (36.6% sensitivity).
     - Results suggest nurse predictions could help expedite certain hospital admission decisions and improve ED patient flow, despite not being reliable enough for complete automation.
-date: 2025-05
+date: 2025-05-27
 venue: 'Western Journal of Emergency Medicine'
 # paperurl: 'https://doi.org/10.1099/ijsem.0.005844'
 slidesurl: 'https://david.kantereivin.ca/files/preprints/NursePrediction-2025-AcceptedWJEM.pdf'
