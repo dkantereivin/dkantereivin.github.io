@@ -2,19 +2,19 @@
 title: "Evaluating the Accuracy of Emergency Department Triage Nurses in Predicting Patient Admissions: retrospective, large-sample evidence from a community ED"
 collection: publications
 category: manuscripts
-permalink: /publication/2025-05-07-NursePrediction
+permalink: /publication/2025-05-27-NursePrediction
 excerpt: |
     - Study evaluating how accurately ED triage nurses can predict patient hospital admissions, using data from 134,891 visits over five years.
     - Found 85.8% overall accuracy, with nurses better at identifying patients who don't need admission (93.7% specificity) than identifying those who do (36.6% sensitivity).
     - Results suggest nurse predictions could help expedite certain hospital admission decisions and improve ED patient flow, despite not being reliable enough for complete automation.
 date: 2025-05-27
 venue: 'Western Journal of Emergency Medicine'
+status: Accepted for Publication at
 # paperurl: 'https://doi.org/10.1099/ijsem.0.005844'
 slidesurl: 'https://david.kantereivin.ca/files/preprints/NursePrediction-2025-AcceptedWJEM.pdf'
 # bibtexurl: 'https://david.kantereivin.ca/files/bibtex/ijsem.0.005844.bib'
 # citation: 'Gupta, R. S., & Kanter-Eivin, D. A. (2023). AppIndels.com server: A web-based tool for the identification of known taxon-specific conserved signature indels in genome sequences. Validation of its genera, 3(5). https://doi.org/10.1099/ijsem.0.005844 '
 ---
-
 
 *Note: This is a preprint of an article that has been accepted for publication in the [Western Journal of Emergency Medicine](https://westjem.com/). The final version will be available in the near future.*
 

@@ -156,6 +156,7 @@ analytics:
 include:
   - .htaccess
   - _pages
+  - _redirects
   - files
 exclude:
   - "*.sublime-project"
