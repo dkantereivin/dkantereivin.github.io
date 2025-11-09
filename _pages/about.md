@@ -11,4 +11,6 @@ redirect_from:
 - If you're stumbling upon this page, you might be looking for my research papers, projects, or other academic contributions.
 - Unfortunately, this page is still under construction, but some of my research papers and posters (blog posts) are available in their respective sections.
 
+In the meantime, you can view a PDF of my CV [here](/files/cv/em.pdf).
+
 Please feel free to contact me if you have any questions or if you're interested in collaborating on research projects.
