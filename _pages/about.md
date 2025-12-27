@@ -29,67 +29,10 @@ Please feel free to contact me if you have any questions or if you're interested
 
 ### Gallery
 
-<div id="immich-frame" style="width: 100%; max-width: 800px; height: 500px; margin: 0 auto; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); background: #f0f0f0;">
-    <img id="frame-image" src="" alt="Loading gallery..." style="width: 100%; height: 100%; object-fit: cover; transition: opacity 1s ease-in-out; opacity: 0;">
-    <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; padding: 5px 10px; border-radius: 20px; font-size: 12px; pointer-events: none;">
-        <span id="photo-credit">Immich Gallery</span>
-    </div>
-</div>
-
-<script>
-    const CONFIG = {
-        domain: "https://immich.kantereivin.ca",
-        shareKey: "dkanter_public", // The part after /s/ in your URL
-        interval: 5000 // Time per slide in ms
-    };
-
-    async function startSlideshow() {
-        try {
-            // 1. Fetch the assets from the shared link API
-            // Correct endpoint for public shares: /api/shared-links/me?slug={shareKey}
-            const response = await fetch(`${CONFIG.domain}/api/shared-links/me?slug=${CONFIG.shareKey}`, {
-                headers: { 'Accept': 'application/json' }
-            });
-            const data = await response.json();
-            const assets = data.assets;
-            
-            if (!assets || assets.length === 0) return;
-
-            const imgElement = document.getElementById('frame-image');
-            let currentIndex = 0;
-
-            // 2. Function to update the image
-            const showNextImage = () => {
-                const asset = assets[currentIndex];
-                // Construct the asset URL
-                // Use 'slug' parameter for public access
-                const imageUrl = `${CONFIG.domain}/api/assets/${asset.id}/thumbnail?size=preview&slug=${CONFIG.shareKey}`;
-                
-                // Preload next image for smoothness
-                const nextIndex = (currentIndex + 1) % assets.length;
-                const nextAsset = assets[nextIndex];
-                const nextUrl = `${CONFIG.domain}/api/assets/${nextAsset.id}/thumbnail?size=preview&slug=${CONFIG.shareKey}`;
-                new Image().src = nextUrl;
-
-                // Fade out, switch source, fade in
-                imgElement.style.opacity = 0;
-                setTimeout(() => {
-                    imgElement.src = imageUrl;
-                    imgElement.onload = () => { imgElement.style.opacity = 1; };
-                }, 1000); // Matches CSS transition time
-
-                currentIndex = nextIndex;
-            };
-
-            // Start loop
-            showNextImage();
-            setInterval(showNextImage, CONFIG.interval);
-
-        } catch (e) {
-            console.error("Could not load Immich gallery:", e);
-            document.getElementById('immich-frame').innerHTML = "<p style='text-align:center; padding-top:40%; color:#666;'>Gallery currently unavailable.</p>";
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", startSlideshow);
-</script>
+<iframe
+  src="https://immich.kantereivin.ca/s/dkanter_public"
+  width="100%"
+  height="600"
+  style="border:none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
+  allowfullscreen>
+</iframe>
