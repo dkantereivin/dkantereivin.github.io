@@ -27,7 +27,7 @@ you can view my CV [here](/files/cv/em.pdf).
 
 Please feel free to contact me if you have any questions or if you're interested in collaborating on research projects.
 
-### Gallery
+<!-- ### Gallery
 
 <iframe
   src="https://immich.kantereivin.ca/s/dkanter_public"
@@ -35,4 +35,4 @@ Please feel free to contact me if you have any questions or if you're interested
   height="600"
   style="border:none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
   allowfullscreen>
-</iframe>
+</iframe> -->
