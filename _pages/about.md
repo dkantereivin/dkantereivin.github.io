@@ -46,10 +46,12 @@ Please feel free to contact me if you have any questions or if you're interested
     async function startSlideshow() {
         try {
             // 1. Fetch the assets from the shared link API
-            const response = await fetch(`${CONFIG.domain}/api/shared-links/${CONFIG.shareKey}/assets`, {
+            // Correct endpoint for public shares: /api/shared-links/me?slug={shareKey}
+            const response = await fetch(`${CONFIG.domain}/api/shared-links/me?slug=${CONFIG.shareKey}`, {
                 headers: { 'Accept': 'application/json' }
             });
-            const assets = await response.json();
+            const data = await response.json();
+            const assets = data.assets;
             
             if (!assets || assets.length === 0) return;
 
@@ -60,12 +62,13 @@ Please feel free to contact me if you have any questions or if you're interested
             const showNextImage = () => {
                 const asset = assets[currentIndex];
                 // Construct the asset URL
-                const imageUrl = `${CONFIG.domain}/api/assets/${asset.id}/thumbnail?size=preview&key=${CONFIG.shareKey}`;
+                // Use 'slug' parameter for public access
+                const imageUrl = `${CONFIG.domain}/api/assets/${asset.id}/thumbnail?size=preview&slug=${CONFIG.shareKey}`;
                 
                 // Preload next image for smoothness
                 const nextIndex = (currentIndex + 1) % assets.length;
                 const nextAsset = assets[nextIndex];
-                const nextUrl = `${CONFIG.domain}/api/assets/${nextAsset.id}/thumbnail?size=preview&key=${CONFIG.shareKey}`;
+                const nextUrl = `${CONFIG.domain}/api/assets/${nextAsset.id}/thumbnail?size=preview&slug=${CONFIG.shareKey}`;
                 new Image().src = nextUrl;
 
                 // Fade out, switch source, fade in
